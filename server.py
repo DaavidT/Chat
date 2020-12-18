@@ -10,7 +10,7 @@ def init_server():
         with conn:
             print("Conectado por", addr)
             while True:
-                data = s.recv(1024)
+                data = conn.recv(1024)
                 conn.sendall(data)
 
 
